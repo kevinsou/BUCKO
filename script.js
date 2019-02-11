@@ -24,31 +24,31 @@ const td = [document.querySelector('.b1'),
             document.querySelector('.o4'),   
             document.querySelector('.o5')   
 ]
+const winH1 = document.querySelector('.win');
 const phrases = ["Self organized means the team",
                 "You all own it",
                 "Done means done",
                 "Go live ready",
-                "asdfasd fasdff sdsds",
+                "phrase holder 1",
                 "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key",
-                "Teamwork is key"];
-
+                "phrase holder 2",
+                "phrase holder 3",
+                "phrase holder 4",
+                "phrase holder 5",
+                "phrase holder 6",
+                "phrase holder 7",
+                "phrase holder 8",
+                "phrase holder 9",
+                "phrase holder 10",
+                "phrase holder 12",
+                "phrase holder 13",
+                "phrase holder 14",
+                "phrase holder 15",
+                "phrase holder 16",
+                "phrase holder 17",
+                "phrase holder 18",
+                "phrase holder 19",
+                "phrase holder 20"];
 
 
 const shuffle = (array)=> {
@@ -77,10 +77,93 @@ const tog = (event) => {
     console.log(event); 
     if(event.target.style.background==="yellow"){
         event.target.style.background="lightblue";
-        return;
+    }else{
+        event.target.style.background="yellow"; 
     }
-    event.target.style.background="yellow"; 
-    
+    win(td);
+}
+
+const win = (td) => {
+    if(
+        //horizontal
+        td[0].style.background==="yellow" &&
+        td[1].style.background==="yellow" &&
+        td[2].style.background==="yellow" &&
+        td[3].style.background==="yellow" &&
+        td[4].style.background==="yellow" ||
+
+        td[5].style.background==="yellow" &&
+        td[6].style.background==="yellow" &&
+        td[7].style.background==="yellow" &&
+        td[8].style.background==="yellow" &&
+        td[9].style.background==="yellow" ||
+
+        td[10].style.background==="yellow" &&
+        td[11].style.background==="yellow" &&
+        td[12].style.background==="yellow" &&
+        td[13].style.background==="yellow" &&
+        td[14].style.background==="yellow" ||
+
+        td[15].style.background==="yellow" &&
+        td[16].style.background==="yellow" &&
+        td[17].style.background==="yellow" &&
+        td[18].style.background==="yellow" &&
+        td[19].style.background==="yellow" ||
+
+        td[20].style.background==="yellow" &&
+        td[21].style.background==="yellow" &&
+        td[22].style.background==="yellow" &&
+        td[23].style.background==="yellow" &&
+        td[24].style.background==="yellow" ||
+
+        //vertical
+        td[0].style.background==="yellow" &&
+        td[5].style.background==="yellow" &&
+        td[10].style.background==="yellow" &&
+        td[15].style.background==="yellow" &&
+        td[20].style.background==="yellow" ||
+        
+        td[1].style.background==="yellow" &&
+        td[6].style.background==="yellow" &&
+        td[11].style.background==="yellow" &&
+        td[16].style.background==="yellow" &&
+        td[21].style.background==="yellow" ||
+
+        td[2].style.background==="yellow" &&
+        td[7].style.background==="yellow" &&
+        td[12].style.background==="yellow" &&
+        td[17].style.background==="yellow" &&
+        td[22].style.background==="yellow" ||
+        
+        td[3].style.background==="yellow" &&
+        td[8].style.background==="yellow" &&
+        td[13].style.background==="yellow" &&
+        td[18].style.background==="yellow" &&
+        td[23].style.background==="yellow" ||
+
+        td[4].style.background==="yellow" &&
+        td[9].style.background==="yellow" &&
+        td[14].style.background==="yellow" &&
+        td[19].style.background==="yellow" &&
+        td[24].style.background==="yellow" ||
+
+        //cross
+        td[0].style.background==="yellow" &&
+        td[6].style.background==="yellow" &&
+        td[12].style.background==="yellow" &&
+        td[18].style.background==="yellow" &&
+        td[24].style.background==="yellow" ||
+        
+        td[4].style.background==="yellow" &&
+        td[8].style.background==="yellow" &&
+        td[12].style.background==="yellow" &&
+        td[16].style.background==="yellow" &&
+        td[20].style.background==="yellow" 
+        
+    ){
+        console.log("you win");
+        window.location.replace("winPage.html");
+    }
 }
 
 shuffle(phrases);
