@@ -161,7 +161,7 @@ const win = (td) => {
         td[20].style.background==="yellow" 
         
     ){
-        console.log("you win");
+        //console.log("you win");
         window.location.replace("winPage.html");
     }
 }
