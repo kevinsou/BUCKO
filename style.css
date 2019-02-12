@@ -22,12 +22,13 @@ a{
 table{
     border-style: solid;
     border-width: 20px;
-    width: 50%;
+    width: 90%;
     height: 50%;
     margin-left: auto;
     margin-right: auto;
     border-color: black;
     background:lightblue;
+    table-layout: fixed;
 }
 td{
     border-style: solid;
@@ -42,6 +43,7 @@ td{
     user-select: none;
     width: 200px;
     height: 100px;
+    font-size: 2vw;
 }
 th{
     text-align: center;
@@ -63,3 +65,5 @@ img {
     margin-right: auto;
     width: 50%;
 }
+
+
